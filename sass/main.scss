@@ -1,9 +1,9 @@
 @import './utils/variables';
 @import './base/common';
-@import './base/container';
+@import './components/container';
 @import './base/visually-hidden';
-@import './base/section-paddings';
-@import './base/section-title';
+@import './components/section-paddings';
+@import './components/section-title';
 @import './components/logo';
 @import './components/page-header';
 @import './components/hero';

@@ -1,35 +1,47 @@
 /* Hero section styles */
 .hero {
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-color: $hero-background-color;
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/hero-background-image.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: {
+    color: $hero-background-color;
+    image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-background-image.jpg);
+    repeat: no-repeat;
+    position: center;
+    size: cover;
+  }
   text-align: center;
+  @media screen and(min-width: $mobile) {
+    max-width: $mobile;
+  }
+  @media screen and(min-width: $tablet) {
+    max-width: $tablet;
+  }
+  @media screen and(min-width: $desktop) {
+    max-width: $desktop + 400px;
+    height: 600px;
+  }
 }
 .hero-title {
   margin-top: 0;
   margin-bottom: 30px;
-
   color: $hero-title-color;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  @media screen and(min-width: $mobile) {
+    font-size: 26px;
+    line-height: 1.62;
+  }
 }
 .hero .button {
   display: inline-block;
@@ -47,6 +59,6 @@
   &:hover,
   &:focus {
     color: $emphasis-color;
-    background-color: $page-background-color;
+    background-color: $button-hover-color;
   }
 }

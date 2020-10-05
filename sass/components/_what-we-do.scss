@@ -1,6 +1,9 @@
 /* What we do section styles*/
 .what-we-do {
   padding-top: 0;
+  @media screen and (max-width: $desktop - 1px) {
+    display: none;
+  }
 }
 .what-we-do-list {
   display: flex;

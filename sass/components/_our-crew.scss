@@ -1,7 +1,6 @@
 /* Our crew section styles */
 .our-crew {
   background-color: $crew-background-color;
-
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -13,22 +12,46 @@
   margin-bottom: 10px;
 }
 .our-crew-members {
-  display: flex;
-  justify-content: center;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: center;
+  }
 }
 .our-crew-members .item {
   background-color: #fff;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  padding-bottom: 24px;
+  & img {
+    @media screen and (max-width: $mobile - 1px) {
+      width: 100%;
+    }
+    @media screen and (min-width: $mobile) {
+      width: 450px;
+      height: 460px;
+    }
+    @media screen and (min-width: $tablet) {
+      width: 354px;
+      height: 374px;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 30px;
+  }
 }
 .our-crew-members .item + .item {
-  margin-left: 30px;
+  @media screen and (min-width: $desktop) {
+    margin-left: 30px;
+  }
 }
 .our-crew .text {
   margin-bottom: 16px;
 }
 
-.our-crew .social-links-list {
-  margin-bottom: 30px;
-}
+// .our-crew .social-links-list {
+//   margin-bottom: 24px;
+//   @media screen and (min-width: $desktop) {
+//     margin-bottom: 30px;
+//   }
+// }
