@@ -12,9 +12,17 @@
   margin-bottom: 10px;
 }
 .our-crew-members {
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     justify-content: center;
+    @media screen and (max-width: $desktop - 1px) {
+      flex-wrap: wrap;
+    }
+  }
+}
+.our-crew-members .item + .item {
+  @media screen and (min-width: $tablet) {
+    margin-left: 30px;
   }
 }
 .our-crew-members .item {
@@ -23,26 +31,41 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   padding-bottom: 24px;
-  & img {
-    @media screen and (max-width: $mobile - 1px) {
-      width: 100%;
-    }
-    @media screen and (min-width: $mobile) {
-      width: 450px;
-      height: 460px;
-    }
-    @media screen and (min-width: $tablet) {
-      width: 354px;
-      height: 374px;
-    }
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 354px;
   }
   @media screen and (min-width: $desktop) {
+    width: 270px;
     padding-bottom: 30px;
   }
+  &:not(:last-child) {
+    @media screen and (max-width: $desktop - 1px) {
+      margin-bottom: 30px;
+    }
+  }
+  &:nth-child(3n) {
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 0;
+      @media screen and (max-width: $desktop - 1px) {
+        margin-left: 0;
+      }
+    }
+  }
 }
-.our-crew-members .item + .item {
+
+.our-crew-members .item .image {
+  width: 100%;
+  @media screen and (min-width: $mobile) {
+    height: 460px;
+  }
+  @media screen and (min-width: $tablet) {
+    height: 374px;
+  }
   @media screen and (min-width: $desktop) {
-    margin-left: 30px;
+    height: 260px;
   }
 }
 .our-crew .text {
