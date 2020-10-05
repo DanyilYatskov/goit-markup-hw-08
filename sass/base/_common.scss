@@ -1,0 +1,56 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  color: $main-text-color;
+  background-color: $page-background-color;
+  font-family: $main-font;
+  font-style: normal;
+
+  // For fixed header ----{
+  /* padding-top: $header-height; */
+}
+/* .header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  min-height: $header-height;
+  background-color: #fff;
+  z-index: 99;
+} */
+// }---
+
+.link {
+  text-decoration: none;
+  transition: color 250ms $animation-timing,
+    background-color 250ms $animation-timing;
+}
+.button {
+  border: none;
+  transition: color 250ms $animation-timing,
+    background-color 250ms $animation-timing, fill 250ms $animation-timing;
+  cursor: pointer;
+}
+.list {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.item {
+  padding: 0px;
+}
+.title {
+  color: $secondary-text-color;
+  margin: 0;
+}
+.text {
+  margin: 0;
+}
+

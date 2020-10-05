@@ -1,0 +1,153 @@
+/* sign in form styles */
+.sign-in-form {
+  align-items: center;
+  margin: 0;
+}
+.sign-in-form .text {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.15;
+  /* identical to box height */
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+.sign-in-form .label {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+}
+.sign-in-form .input {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 42px;
+  cursor: pointer;
+}
+
+.sign-in-form .icon {
+  position: absolute;
+  left: 15px;
+  top: 32px;
+
+  transition: fill 250ms $animation-timing;
+}
+// .sign-in-form .sign-in-name:focus,
+// .sign-in-form .sign-in-phone:focus,
+// .sign-in-form .sign-in-email:focus,
+// .sign-in-form .sign-in-comments:focus {
+//   outline: none;
+//   border-color: $emphasis-color;
+// }
+.sign-in-form {
+  .sign-in-name,
+  .sign-in-phone,
+  .sign-in-email,
+  .sign-in-comments {
+    &:focus {
+      outline: none;
+      border-color: $emphasis-color;
+    }
+  }
+}
+// .sign-in-name:focus + .icon,
+// .sign-in-phone:focus + .icon,
+// .sign-in-email:focus + .icon {
+//   fill: $emphasis-color;
+// }
+.sign-in-name,
+.sign-in-phone,
+.sign-in-email {
+  &:focus + .icon {
+    fill: $emphasis-color;
+  }
+}
+.sign-in-form .sign-in-comments {
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 12px 16px;
+  resize: none;
+  cursor: pointer;
+  &::placeholder {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+.sign-in-form .sign-in-comments-label {
+  margin-bottom: 20px;
+}
+
+.sign-in-agreement-label .icon-check {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 4px;
+  margin-right: 8px;
+  transition: background-color 250ms $animation-timing,
+    background-image 250ms $animation-timing;
+}
+.sign-in-agreement:checked + .icon-check {
+  background-color: $emphasis-color;
+  background-image: url(../images/icon_check.svg);
+  border-color: $emphasis-color;
+  background-size: contain;
+  background-origin: border-box;
+}
+.sign-in-form .sign-in-agreement-label {
+  margin-bottom: 30px;
+  margin-left: 14px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.sign-in-form .sign-in-agreement-label .text,
+.sign-in-form .sign-in-agreement-label .link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $main-text-color;
+  margin-bottom: 0;
+}
+.sign-in-form .sign-in-agreement-label .link {
+  display: inline-block;
+  margin-left: 2px;
+  color: $emphasis-color;
+  text-decoration: underline;
+}
+.sign-in-form .button {
+  width: 200px;
+  height: 50px;
+  margin-left: 125px;
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  /* identical to box height, or 187% */
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  &:hover,
+  &:focus {
+    color: $emphasis-color;
+    background-color: #f5f4fa;
+  }
+}

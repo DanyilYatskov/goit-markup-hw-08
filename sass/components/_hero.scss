@@ -1,0 +1,52 @@
+/* Hero section styles */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $hero-background-color;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-background-image.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+.hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  color: $hero-title-color;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.hero .button {
+  display: inline-block;
+  min-width: 200px;
+  padding: 10px 32px;
+  border-radius: 4px;
+  background-color: $emphasis-color;
+
+  color: $hero-title-color;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  letter-spacing: 0.06em;
+  &:hover,
+  &:focus {
+    color: $emphasis-color;
+    background-color: $page-background-color;
+  }
+}
