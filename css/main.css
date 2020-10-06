@@ -874,6 +874,12 @@ body {
   padding-bottom: 60px;
 }
 
+@media screen and (max-width: 1199px) {
+  .footer-logo-adress {
+    margin-bottom: 60px;
+  }
+}
+
 .footer .logo {
   display: inline-block;
   color: white;
@@ -899,11 +905,13 @@ body {
 }
 
 .footer-adress-nav .item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
-.footer-flexbox {
-  text-align: center;
+@media screen and (max-width: 1199px) {
+  .footer-flexbox {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -917,6 +925,25 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-flexbox {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .join-us {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .join-us {
+    margin-left: 165px;
   }
 }
 
@@ -984,7 +1011,7 @@ body {
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: #2f303a;
-  width: 358px;
+  width: 100%;
   height: 50px;
   padding-left: 16px;
   padding-right: 16px;
@@ -994,6 +1021,25 @@ body {
   /* identical to box height, or 125% */
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-sign .sign-mail {
+    margin-bottom: 30px;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .footer-sign .sign-mail {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-sign .sign-mail {
+    width: 358px;
+  }
 }
 
 .footer-sign .sign-mail::-webkit-input-placeholder {
@@ -1056,8 +1102,15 @@ body {
 }
 
 .footer-sign .button {
-  margin-left: 12px;
-  width: 200px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 50px;
   background: #2196f3;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -1073,15 +1126,13 @@ body {
 
 @media screen and (min-width: 1200px) {
   .footer-sign .button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    margin-left: 12px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .footer-sign .button {
+    width: 200px;
   }
 }
 
