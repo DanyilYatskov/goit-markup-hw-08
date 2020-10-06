@@ -2,15 +2,44 @@
 
 .our-projects-nav {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+
+  @media screen and (max-width: $tablet - 1px) {
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
 }
 .our-projects-nav .item + .item {
   margin-left: 8px;
 }
+.our-projects-nav .item {
+  @media screen and (max-width: 384px) {
+    &:nth-child(2n + 1) {
+      margin-left: 0;
+    }
+  }
+  @media screen and (max-width: $tablet - 1px) {
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 15px;
+    }
+    @media screen and (min-width: 385px) {
+      &:nth-child(4n) {
+        margin: 0;
+      }
+    }
+  }
+}
 .our-projects-nav .link {
   display: inline-block;
   min-width: 73px;
+  min-height: 38px;
   padding: 6px 22px;
   background-color: #f5f4fa;
   border-radius: 4px;
