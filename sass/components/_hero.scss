@@ -45,17 +45,19 @@
 }
 .hero .button {
   display: inline-block;
-  min-width: 200px;
   padding: 10px 32px;
   border-radius: 4px;
   background-color: $emphasis-color;
-
   color: $hero-title-color;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   align-items: center;
   letter-spacing: 0.06em;
+  @media screen and(min-width:$mobile) {
+    min-width: 200px;
+    height: 50px;
+  }
   &:hover,
   &:focus {
     color: $emphasis-color;

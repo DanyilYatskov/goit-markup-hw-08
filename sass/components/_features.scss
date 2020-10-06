@@ -1,27 +1,41 @@
 /* Features section styles */
 
 .features-list {
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     justify-content: center;
+    @media screen and (max-width: $desktop - 1px) {
+      flex-wrap: wrap;
+    }
   }
 }
-
+.features-list .item + .item {
+  @media screen and (min-width: $tablet) {
+    margin-left: 30px;
+  }
+}
 .features-list .item {
-  @media screen and (max-width: $tablet - 1px) {
+  @media screen and (max-width: $desktop - 1px) {
     &:not(:last-child) {
       margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 354px;
+    @media screen and (max-width: $desktop - 1px) {
+      &:nth-child(3n) {
+        margin: 0;
+      }
     }
   }
   @media screen and (min-width: $desktop) {
     width: 270px;
   }
 }
-.features-list .item + .item {
-  @media screen and (min-width: $desktop) {
-    margin-left: 30px;
-  }
-}
+
 .features .title {
   font-weight: 700;
   font-size: 14px;
@@ -44,10 +58,4 @@
   background-color: $crew-background-color;
   border-radius: 4px;
   margin-bottom: 30px;
-  @media screen and (min-width: $mobile) {
-    width: 450px;
-  }
-  @media screen and (min-width: $desktop) {
-    width: 270px;
-  }
 }
