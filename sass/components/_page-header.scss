@@ -3,11 +3,12 @@
   border-bottom: 1px solid #ececec;
   @media screen and (max-width: $tablet - 1px) {
     height: 60px;
+    position: relative;
   }
 }
 .header .container {
   @media screen and (max-width: $tablet - 1px) {
-    position: relative;
+    //position: relative;
   }
 }
 .mobile-menu-button {
@@ -25,14 +26,44 @@
   @media screen and (min-width: $tablet) {
     display: none;
   }
+
   &:hover,
   &:focus {
     fill: $emphasis-color;
   }
 }
+.mobile-menu-close {
+  display: none;
+}
+.mobile-menu-show {
+  .mobile-menu-button.is-open & {
+    display: none;
+  }
+}
+.mobile-menu-close {
+  .mobile-menu-button.is-open & {
+    display: block;
+  }
+}
+
 .mobile-menu-container {
   @media screen and (max-width: $tablet - 1px) {
     display: none;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+    padding-top: 52px;
+    padding-bottom: 52px;
+    align-items: center;
+    text-align: center;
+    z-index: 99;
+  }
+  &.is-open {
+    display: block;
   }
 }
 .header .container,
@@ -47,19 +78,27 @@
 .header .link {
   display: inline-block;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 18px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
+  padding-top: 8px;
+  padding-bottom: 8px;
   @media screen and (min-width: $tablet) {
     padding-top: 32px;
     padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 .site-nav .item + .item {
+  @media screen and (max-width: $tablet - 1px) {
+    margin-top: 40px;
+  }
   @media screen and (min-width: $tablet) {
     margin-left: 50px;
   }
 }
+
 .site-nav .link {
   color: $secondary-text-color;
   position: relative;
@@ -92,6 +131,9 @@
 }
 
 .adress-nav {
+  @media screen and (max-width: $tablet - 1px) {
+    margin-top: 52px;
+  }
   @media screen and (min-width: $tablet) {
     margin-left: auto;
     margin-left: 84px;
@@ -112,10 +154,13 @@
   }
 }
 .adress-nav .link {
-  display: flex;
   justify-content: left;
   align-items: center;
+  @media screen and (max-width: $tablet - 1px) {
+    display: inline-flex;
+  }
   @media screen and (min-width: $tablet) {
+    display: flex;
     @media screen and (max-width: $desktop - 1px) {
       font-size: 12px;
       padding-top: 0;

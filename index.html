@@ -20,7 +20,7 @@
         <a href="./index.html" class="logo"
           ><span class="logo-web">Web</span>Studio</a
         >
-        <div class="mobile-menu-container">
+        <div class="mobile-menu-container" id="mobile-menu-container" data-menu>
           <nav class="nav">
             <ul class="site-nav list">
               <li class="item">
@@ -52,7 +52,14 @@
             </li>
           </ul>
         </div>
-        <button type="button" class="mobile-menu-button">
+        <button
+          type="button"
+          class="mobile-menu-button"
+          aria-expanded="false"
+          aria-controls="mobile-menu-container"
+          aria-label="Переключатель мобильного меню"
+          data-menu-button
+        >
           <svg width="40" height="40">
             <use
               href="./images/symbol-defs-new.svg#icon-mobile-menu-show"
@@ -589,6 +596,7 @@
         </div>
       </div>
       <script src="./js/modal.js"></script>
+      <script src="js/menu.js"></script>
     </main>
 
     <footer class="footer">
