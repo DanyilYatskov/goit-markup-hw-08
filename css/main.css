@@ -125,7 +125,6 @@ body {
 }
 
 .logo {
-  margin-right: 88px;
   color: #212121;
   text-decoration: none;
   font-family: "Raleway", sans-serif;
@@ -133,6 +132,20 @@ body {
   font-size: 24px;
   line-height: 1.17;
   letter-spacing: 0.02em;
+}
+
+@media screen and (max-width: 767px) {
+  .logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 88px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -153,8 +166,58 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
+@media screen and (max-width: 767px) {
+  .header {
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header .container {
+    position: relative;
+  }
+}
+
+.mobile-menu-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  fill: #212121;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu-button {
+    display: none;
+  }
+}
+
+.mobile-menu-button:hover, .mobile-menu-button:focus {
+  fill: #2196f3;
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-menu-container {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .header .container,
+  .mobile-menu-container,
+  .site-nav,
   .nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -177,14 +240,6 @@ body {
   .header .link {
     padding-top: 32px;
     padding-bottom: 32px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .site-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
 }
 
@@ -232,8 +287,11 @@ body {
           transform: scalex(1);
 }
 
-.adress-nav {
-  margin-left: auto;
+@media screen and (min-width: 768px) {
+  .adress-nav {
+    margin-left: auto;
+    margin-left: 84px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -241,6 +299,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-left: 305px;
   }
 }
 
@@ -252,7 +311,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .adress-nav .item + .item {
-    margin-left: 50px;
+    margin-left: 30px;
   }
 }
 

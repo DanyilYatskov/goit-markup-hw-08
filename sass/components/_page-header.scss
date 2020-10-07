@@ -1,8 +1,43 @@
 /* Header Styles */
 .header {
   border-bottom: 1px solid #ececec;
+  @media screen and (max-width: $tablet - 1px) {
+    height: 60px;
+  }
+}
+.header .container {
+  @media screen and (max-width: $tablet - 1px) {
+    position: relative;
+  }
+}
+.mobile-menu-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  fill: $secondary-text-color;
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+  &:hover,
+  &:focus {
+    fill: $emphasis-color;
+  }
+}
+.mobile-menu-container {
+  @media screen and (max-width: $tablet - 1px) {
+    display: none;
+  }
 }
 .header .container,
+.mobile-menu-container,
+.site-nav,
 .nav {
   @media screen and (min-width: $tablet) {
     display: flex;
@@ -18,11 +53,6 @@
   @media screen and (min-width: $tablet) {
     padding-top: 32px;
     padding-bottom: 32px;
-  }
-}
-.site-nav {
-  @media screen and (min-width: $tablet) {
-    display: flex;
   }
 }
 .site-nav .item + .item {
@@ -62,9 +92,13 @@
 }
 
 .adress-nav {
-  margin-left: auto;
+  @media screen and (min-width: $tablet) {
+    margin-left: auto;
+    margin-left: 84px;
+  }
   @media screen and (min-width: $desktop) {
     display: flex;
+    margin-left: 305px;
   }
 }
 .adress-nav .item + .item {
@@ -74,7 +108,7 @@
     }
   }
   @media screen and (min-width: $desktop) {
-    margin-left: 50px;
+    margin-left: 30px;
   }
 }
 .adress-nav .link {
