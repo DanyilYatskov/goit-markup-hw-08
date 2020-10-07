@@ -45,6 +45,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: $desktop - 1px) {
+    top: 16px;
+  }
   &:hover,
   &:focus {
     fill: $emphasis-color;
