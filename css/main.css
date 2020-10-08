@@ -1128,10 +1128,20 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+}
+
+@media screen and (max-width: 479px) {
+  .sign-in-form .sign-in-agreement-label {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1151,6 +1161,13 @@ img {
   margin-bottom: 0;
 }
 
+@media screen and (max-width: 479px) {
+  .sign-in-form .sign-in-agreement-label .text,
+  .sign-in-form .sign-in-agreement-label .link {
+    text-align: center;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .sign-in-form .sign-in-agreement-label .text,
   .sign-in-form .sign-in-agreement-label .link {
@@ -1160,16 +1177,20 @@ img {
 }
 
 .sign-in-form .sign-in-agreement-label .link {
-  display: inline-block;
-  margin-left: 2px;
   color: #2196f3;
   text-decoration: underline;
+}
+
+@media screen and (min-width: 480px) {
+  .sign-in-form .sign-in-agreement-label .link {
+    margin-left: 2px;
+  }
 }
 
 .sign-in-form .button {
   width: 200px;
   height: 50px;
-  margin-left: 85px;
+  margin-left: calc((100% - 200px) / 2);
   background: #188ce8;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -1184,12 +1205,6 @@ img {
   text-align: center;
   letter-spacing: 0.06em;
   color: #ffffff;
-}
-
-@media screen and (min-width: 1200px) {
-  .sign-in-form .button {
-    margin-left: 124px;
-  }
 }
 
 .sign-in-form .button:hover, .sign-in-form .button:focus {
