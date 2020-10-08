@@ -148,34 +148,52 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="what-we-do-list list">
             <li class="item">
-              <img
-                src="./images/desktop-apps.jpg"
-                alt="Десктопные приложения"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop-apps.jpg    1x,
+                    ./images/desktop-apps-2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/desktop-apps.jpg"
+                  alt="Десктопные приложения"
+                />
+              </picture>
               <div class="text-container">
                 <p class="text">Десктопные приложения</p>
               </div>
             </li>
             <li class="item">
-              <img
-                src="./images/smartphone-apps.jpg"
-                alt="Мобильные приложения"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/smartphone-apps.jpg    1x,
+                    ./images/smartphone-apps-2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/smartphone-apps.jpg"
+                  alt="Мобильные приложения"
+                />
+              </picture>
               <div class="text-container">
                 <p class="text">Мобильные приложения</p>
               </div>
             </li>
             <li class="item">
-              <img
-                src="./images/design-solutions.jpg"
-                alt="Дизайнерские решения"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/design-solutions.jpg    1x,
+                    ./images/design-solutions-2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/design-solutions.jpg"
+                  alt="Дизайнерские решения"
+                />
+              </picture>
               <div class="text-container">
                 <p class="text">Дизайнерские решения</p>
               </div>
@@ -189,11 +207,34 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="our-crew-members list">
             <li class="item">
-              <img
-                src="./images/igor-demyanenko.jpg"
-                alt="Игорь Демьненко"
-                class="image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/igor-demyanenko.jpg    1x,
+                    ./images/igor-demyanenko-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/igor-demyanenko.jpg    1x,
+                    ./images/tablet/igor-demyanenko-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/igor-demyanenko.jpg    1x,
+                    ./images/mobile/igor-demyanenko-2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/igor-demyanenko.jpg"
+                  alt="Игорь Демьненко"
+                  class="image"
+                />
+              </picture>
               <h3 class="title">Игорь Демьненко</h3>
               <p class="text">Product Designer</p>
               <ul class="social-links-list list">
@@ -252,11 +293,34 @@
               </ul>
             </li>
             <li class="item">
-              <img
-                src="./images/olga-repina.jpg"
-                alt="Ольга Репина"
-                class="image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/olga-repina.jpg    1x,
+                    ./images/olga-repina-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/olga-repina.jpg    1x,
+                    ./images/tablet/olga-repina-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/olga-repina.jpg    1x,
+                    ./images/mobile/olga-repina-2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/olga-repina.jpg"
+                  alt="Ольга Репина"
+                  class="image"
+                />
+              </picture>
               <h3 class="title">Ольга Репина</h3>
               <p class="text">Frontend Developer</p>
               <ul class="social-links-list list">
@@ -315,11 +379,35 @@
               </ul>
             </li>
             <li class="item">
-              <img
-                src="./images/nikolay-tarasov.jpg"
-                alt="Николай Тарасов"
-                class="image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/nikolay-tarasov-2x.jpg 2x,
+                    ./images/nikolay-tarasov.jpg    1x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/nikolay-tarasov.jpg    1x,
+                    ./images/tablet/nikolay-tarasov-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/nikolay-tarasov.jpg    1x,
+                    ./images/mobile/nikolay-tarasov-2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/nikolay-tarasov.jpg"
+                  alt="Николай Тарасов"
+                  class="image"
+                />
+              </picture>
+
               <h3 class="title">Николай Тарасов</h3>
               <p class="text">Marketing</p>
               <ul class="social-links-list list">
@@ -378,11 +466,35 @@
               </ul>
             </li>
             <li class="item">
-              <img
-                src="./images/mihail-ermakov.jpg"
-                alt="Михаил Ермаков"
-                class="image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mihail-ermakov.jpg    1x,
+                    ./images/mihail-ermakov-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/mihail-ermakov.jpg    1x,
+                    ./images/tablet/mihail-ermakov-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/mihail-ermakov.jpg    1x,
+                    ./images/mobile/mihail-ermakov-2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/mihail-ermakov.jpg"
+                  alt="Михаил Ермаков"
+                  class="image"
+                />
+              </picture>
+
               <h3 class="title">Михаил Ермаков</h3>
               <p class="text">UI Designer</p>
               <ul class="social-links-list list">
