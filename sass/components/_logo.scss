@@ -6,11 +6,7 @@
   font-size: 24px;
   line-height: 1.17;
   letter-spacing: 0.02em;
-  @media screen and (max-width: $tablet - 1px) {
-    padding-top: 16px;
-    padding-bottom: 16px;
-    display: inline-block;
-  }
+
   @media screen and (min-width: $tablet) {
     margin-right: 88px;
   }
@@ -19,6 +15,12 @@
     font-size: 26px;
     line-height: 1.2;
     letter-spacing: 0.03em;
+  }
+}
+.header .logo {
+  @media screen and (max-width: $tablet - 1px) {
+    padding-top: 16px;
+    display: inline-block;
   }
 }
 .logo-web {
