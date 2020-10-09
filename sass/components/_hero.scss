@@ -1,6 +1,5 @@
 /* Hero section styles */
 .hero {
-  //height: 400px;
   padding-top: 118px;
   padding-bottom: 118px;
   display: flex;
@@ -11,12 +10,6 @@
   margin-right: auto;
   background: {
     color: $hero-background-color;
-    // image: linear-gradient(
-    //     to right,
-    //     rgba(47, 48, 58, 0.4),
-    //     rgba(47, 48, 58, 0.4)
-    //   ),
-    //   url(../images/hero-background-image.jpg);
     repeat: no-repeat;
     position: center;
     size: cover;
