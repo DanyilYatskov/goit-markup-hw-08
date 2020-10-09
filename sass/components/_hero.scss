@@ -1,6 +1,8 @@
 /* Hero section styles */
 .hero {
-  height: 400px;
+  //height: 400px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,10 +22,10 @@
     size: cover;
   }
   text-align: center;
-  @media screen and(min-width: $mobile) {
-    max-width: $mobile;
+  @media screen and (min-width: $mobile) {
+    min-height: 400px;
+    padding: 0;
   }
-
   @media screen and(max-width: $tablet - 1px) {
     background-image: linear-gradient(
         to right,
@@ -43,7 +45,6 @@
     }
   }
   @media screen and(min-width: $tablet) {
-    max-width: $tablet;
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
