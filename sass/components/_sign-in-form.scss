@@ -97,7 +97,10 @@
   height: 15px;
   border: 2px solid #212121;
   border-radius: 4px;
-  margin-right: 8px;
+  @media screen and (min-width: $mobile) {
+    margin-right: 8px;
+  }
+
   transition: background-color 250ms $animation-timing,
     background-image 250ms $animation-timing;
 }
@@ -111,11 +114,11 @@
 .sign-in-form .sign-in-agreement-label {
   margin-bottom: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   cursor: pointer;
   @media screen and (max-width: $mobile - 1px) {
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
   }
   @media screen and (min-width: $desktop) {
     margin-left: 14px;
@@ -145,7 +148,7 @@
 
   @media screen and (min-width: $mobile) {
     //display: inline-block;
-    margin-left: 2px;
+    //margin-left: 2px;
   }
 }
 .sign-in-form .button {

@@ -1141,9 +1141,14 @@ img {
   height: 15px;
   border: 2px solid #212121;
   border-radius: 4px;
-  margin-right: 8px;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 480px) {
+  .sign-in-agreement-label .icon-check {
+    margin-right: 8px;
+  }
 }
 
 .sign-in-agreement:checked + .icon-check {
@@ -1159,20 +1164,13 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-}
-
-@media screen and (max-width: 479px) {
-  .sign-in-form .sign-in-agreement-label {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1210,12 +1208,6 @@ img {
 .sign-in-form .sign-in-agreement-label .link {
   color: #2196f3;
   text-decoration: underline;
-}
-
-@media screen and (min-width: 480px) {
-  .sign-in-form .sign-in-agreement-label .link {
-    margin-left: 2px;
-  }
 }
 
 .sign-in-form .button {
