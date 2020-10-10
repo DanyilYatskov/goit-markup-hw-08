@@ -38,13 +38,7 @@
   top: 32px;
   transition: fill 250ms $animation-timing;
 }
-// .sign-in-form .sign-in-name:focus,
-// .sign-in-form .sign-in-phone:focus,
-// .sign-in-form .sign-in-email:focus,
-// .sign-in-form .sign-in-comments:focus {
-//   outline: none;
-//   border-color: $emphasis-color;
-// }
+
 .sign-in-form {
   .sign-in-name,
   .sign-in-phone,
@@ -56,11 +50,7 @@
     }
   }
 }
-// .sign-in-name:focus + .icon,
-// .sign-in-phone:focus + .icon,
-// .sign-in-email:focus + .icon {
-//   fill: $emphasis-color;
-// }
+
 .sign-in-name,
 .sign-in-phone,
 .sign-in-email {
@@ -92,14 +82,12 @@
 }
 
 .sign-in-agreement-label .icon-check {
-  display: inline-block;
-  width: 16px;
-  height: 15px;
+  display: block;
+  min-width: 16px;
+  min-height: 15px;
   border: 2px solid #212121;
   border-radius: 4px;
-  @media screen and (min-width: $mobile) {
-    margin-right: 8px;
-  }
+  margin-right: 8px;
 
   transition: background-color 250ms $animation-timing,
     background-image 250ms $animation-timing;
@@ -114,19 +102,16 @@
 .sign-in-form .sign-in-agreement-label {
   margin-bottom: 30px;
   display: flex;
-  justify-content: left;
+  justify-content: flex-start;
   align-items: center;
   cursor: pointer;
-  @media screen and (max-width: $mobile - 1px) {
-    // flex-wrap: wrap;
-  }
-  @media screen and (min-width: $desktop) {
-    margin-left: 14px;
+  @media screen and (min-width: 375px) {
+    justify-content: center;
   }
 }
 .sign-in-form .sign-in-agreement-label .text,
 .sign-in-form .sign-in-agreement-label .link {
-  //display: inline-block;
+  display: inline;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -135,7 +120,6 @@
   color: $main-text-color;
   margin-bottom: 0;
   @media screen and (max-width: $mobile - 1px) {
-    text-align: center;
   }
   @media screen and (min-width: $desktop) {
     font-size: 14px;
@@ -145,11 +129,6 @@
 .sign-in-form .sign-in-agreement-label .link {
   color: $emphasis-color;
   text-decoration: underline;
-
-  @media screen and (min-width: $mobile) {
-    //display: inline-block;
-    //margin-left: 2px;
-  }
 }
 .sign-in-form .button {
   width: 200px;
