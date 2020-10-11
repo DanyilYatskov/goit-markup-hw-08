@@ -1628,9 +1628,10 @@ img {
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.our-projects-list .image {
-  width: 100%;
-  height: 294px;
+@media screen and (min-width: 480px) {
+  .our-projects-list .image {
+    height: 100%;
+  }
 }
 
 .our-projects-list .text-contain {
@@ -1655,22 +1656,44 @@ img {
 
 .our-projects-list .thumb {
   position: relative;
-  height: 294px;
   overflow: hidden;
+}
+
+@media screen and (min-width: 480px) {
+  .our-projects-list .thumb {
+    height: 294px;
+  }
 }
 
 /*Signature for our projects styles*/
 .our-projects-signature {
   margin: 0;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 1.56;
-  /* or 156% */
+  font-size: 14px;
+  line-height: 1.26;
   letter-spacing: 0.03em;
   color: #ffffff;
 }
 
+@media screen and (min-width: 375px) {
+  .our-projects-signature {
+    font-size: 18px;
+    line-height: 1.56;
+  }
+}
+
 .our-projects-signature-container {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -1682,10 +1705,8 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   height: 100%;
   width: 100%;
-  padding-top: 63px;
   padding-left: 24px;
   padding-right: 24px;
-  padding-bottom: 63px;
   margin: 0;
   background-color: rgba(33, 150, 243, 0.9);
 }

@@ -41,8 +41,9 @@
   }
 }
 .our-projects-list .image {
-  width: 100%;
-  height: 294px;
+  @media screen and (min-width: $mobile) {
+    height: 100%;
+  }
 }
 .our-projects-list .text-contain {
   padding: 20px 24px;
@@ -66,8 +67,10 @@
 
 .our-projects-list .thumb {
   position: relative;
-  height: 294px;
   overflow: hidden;
+  @media screen and (min-width: $mobile) {
+    height: 294px;
+  }
 }
 // .our-projects-list .item:hover .signature-container,
 // .our-projects-list .item:focus .signature-container {
